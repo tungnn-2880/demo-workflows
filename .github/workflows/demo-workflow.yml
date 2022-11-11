@@ -16,5 +16,7 @@ jobs:
                           run: ls ${{ github.workspace }}
                         - name: Check if i can make path to README.md inside repository
                           run: echo ${{ github.workspace }}/README.md
+                        - name: Print README.md inside repository
+                          run: cat ${{ github.workspace }}/README.md
                         - run: echo "🍏 This job's status is ${{ job.status }}."
 
