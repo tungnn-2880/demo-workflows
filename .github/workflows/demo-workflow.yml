@@ -8,8 +8,8 @@ jobs:
         GiveMe-A_Name:
                 runs-on: ubuntu-latest
                 steps:
-                        - run: echo "A: Who the hell activated this workflow?"
-                        - run: echo "B: It's not me.. it's ${{ github.actor }}..."
+                        - run: echo "Who the hell activated this workflow?"
+                        - run: echo "It's not me.. it's ${{ github.actor }}..."
                         - name: Checkout repository code
                           uses: actions/checkout@v3
                         - name: List files in the repository
