@@ -1,0 +1,20 @@
+name: Demo Github Workflow with Github Actions
+
+run-name: Someone is demonstrating Github Workflow with Github Actions
+
+on: [push]
+
+jobs:
+        GiveMe-A_Name:
+                runs-on: ubuntu-latest
+                steps:
+                        - run: echo "A: Who the hell activated this workflow?"
+                        - run: echo "B: It's not me.. it's ${{ github.actor }}..."
+                        - name: Checkout repository code
+                          uses: actions/checkout@v3
+                        - name: List files in the repository
+                          run: ls ${{ github.workspace }}
+                        - name: Check if i can make path to README.md inside repository
+                          run: echo ${{ github.workspace }}/README.md
+                        - run: echo "🍏 This job's status is ${{ job.status }}."
+
